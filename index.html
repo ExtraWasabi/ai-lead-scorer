@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Lead Scorer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Lead Scorer</h1>
+        <form method="POST" action="/predict">
+            <label for="age">Alter:</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="website_visits">Website-Besuche:</label>
+            <input type="number" id="website_visits" name="website_visits" required>
+
+            <label for="email_interactions">E-Mail-Interaktionen:</label>
+            <input type="number" id="email_interactions" name="email_interactions" required>
+
+            <label for="purchased_before">Hat vorher gekauft:</label>
+            <select id="purchased_before" name="purchased_before" required>
+                <option value="1">Ja</option>
+                <option value="0">Nein</option>
+            </select>
+
+            <button type="submit">Lead-Score berechnen</button>
+        </form>
+    </div>
+</body>
+</html>
