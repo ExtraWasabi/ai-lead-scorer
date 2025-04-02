@@ -1,1 +1,11 @@
-"print('Hello, AI-Lead-Scorer')" 
+from flask import Flask
+
+# Erstelle die Flask-App-Instanz
+app = Flask(__name__)
+
+@app.route('/')
+def hello_world():
+    return 'Hello, World!'
+
+if __name__ == "__main__":
+    app.run(debug=True)
